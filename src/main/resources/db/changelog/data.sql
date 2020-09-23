@@ -1,0 +1,1 @@
+INSERT INTO complaints (id, company, issue) values (1, 'ACME', 'Issue One');

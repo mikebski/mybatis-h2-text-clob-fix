@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="mike (generated)" id="1581340507425-1">
+        <createTable tableName="complaints">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" notNullConstraintName="complaints_complain_id_not_null"/>
+            </column>
+            <column name="company" type="VARCHAR(255)"/>
+            <column name="issue" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <include file="data.sql" relativeToChangelogFile="true"/>
+</databaseChangeLog>

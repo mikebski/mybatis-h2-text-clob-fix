@@ -11,4 +11,5 @@
             <column name="issue" type="TEXT"/>
         </createTable>
     </changeSet>
+    <include file="data.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>

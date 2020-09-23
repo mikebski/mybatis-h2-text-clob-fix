@@ -38,4 +38,15 @@ public class ComplaintMapperTest {
         String issue = complaintMapper.getIssue();
         assertEquals(issue, issueCounts.get(0).getFirst());
     }
+
+    @Test
+    public void test_getIssueCountsWithDefaultMapper(){
+        List<Pair<String, Long>> issueCounts = complaintMapper.getIssueCountsWithDefaultMapper();
+        assertEquals(1, issueCounts.size());
+        for(Pair<String, Long> p : issueCounts){
+            assertNotNull(p);
+        }
+
+        String issue = issueCounts.get(0).getFirst(); // Should be a String...
+    }
 }

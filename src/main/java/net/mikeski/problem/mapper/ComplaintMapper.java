@@ -28,4 +28,7 @@ public interface ComplaintMapper {
     @Select("select issue from complaints limit 1;")
     public String getIssue();
 
+    @Select("select issue as first, count(*) as second from complaints group by issue order by 2 desc;")
+    public List<Pair<String, Long>> getIssueCountsWithDefaultMapper();
+
 }
